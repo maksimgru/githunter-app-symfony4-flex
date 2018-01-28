@@ -1,0 +1,23 @@
+{% set currentUserName = app.request.attributes.get('username') %}
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li {% if currentUserName == 'maksimgru' %} class="active"{% endif %}>
+                <a href="{{ path('githut') }}">My GitHunter</a>
+            </li>
+            <li {% if currentUserName == 'symfony' %} class="active"{% endif %}>
+                <a href="{{ path('githut', {'username': 'symfony'}) }}">Symfony GitHunter</a>
+            </li>
+            <li {% if currentUserName == 'angular' %} class="active"{% endif %}>
+                <a href="{{ path('githut', {'username': 'angular'}) }}">Angular GitHunter</a>
+            </li>
+            <li {% if currentUserName == 'laravel' %} class="active"{% endif %}>
+                <a href="{{ path('githut', {'username': 'laravel'}) }}">Laravel GitHunter</a>
+            </li>
+            <li {% if currentUserName == 'wordpress' %} class="active"{% endif %}>
+                <a href="{{ path('githut', {'username': 'wordpress'}) }}">WordPress GitHunter</a>
+            </li>
+        </ul>
+    </div>
+</nav>
