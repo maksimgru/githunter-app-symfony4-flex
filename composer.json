@@ -51,7 +51,9 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "start" : "php bin/console server:start",
+        "stop" : "php bin/console server:stop"
     },
     "conflict": {
         "symfony/symfony": "*"
